@@ -1,0 +1,203 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+/* Contenedores principales */
+.container {
+    max-width: 1200px;
+}
+
+.pets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .pets-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tarjetas de mascotas */
+.pet-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.pet-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.pet-info {
+    padding: 15px;
+}
+
+.pet-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.pet-info p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.text-muted {
+    color: #6c757d !important;
+    font-size: 0.8rem;
+}
+
+/* Mapas */
+/* Añadir estos estilos para los mapas interactivos */
+.pet-map {
+    height: 250px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    z-index: 1; /* Asegurar que los controles del mapa sean clickeables */
+}
+
+.leaflet-control-container {
+    pointer-events: auto !important;
+}
+
+.leaflet-control-zoom {
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.leaflet-control-zoom-in, 
+.leaflet-control-zoom-out {
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Asegurar que el mapa no interfiera con otros elementos */
+.pet-card {
+    position: relative;
+    overflow: visible; /* Permitir que los controles del mapa se muestren */
+}
+
+/* Mejorar el z-index para los popups */
+.leaflet-popup {
+    z-index: 1000;
+}
+
+.modal-map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Botones */
+.btn {
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.btn-primary:hover {
+    background-color: #ff5252;
+    border-color: #ff5252;
+}
+
+.btn-warning {
+    background-color: #ffd166;
+    border-color: #ffd166;
+}
+
+.btn-info {
+    background-color: #06d6a0;
+    border-color: #06d6a0;
+}
+
+.btn-success {
+    background-color: #4ecdc4;
+    border-color: #4ecdc4;
+}
+
+.btn-action {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+/* Formularios */
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Alertas */
+.alert {
+    margin: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Modales */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .pet-card {
+        margin-bottom: 20px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
