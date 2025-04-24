@@ -1,16 +1,14 @@
-// Datos iniciales completos (15 perdidos + 15 encontrados)
+// Datos iniciales (15 perdidos + 15 encontrados)
 const initialLostPets = [
+    // Perdidos (1-15)
     {
-        id: 1,
-        name: "Max",
-        description: "Perro labrador dorado, collar azul, perdido cerca del parque central. Responde al nombre Max y tiene microchip.",
-        photo: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "15/05/2023",
+        id: 1, name: "Max", 
+        description: "Labrador dorado con collar azul. Perdido cerca del parque central.",
+        photo: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+        date: "15/05/2023", 
         location: { lat: 19.4326, lng: -99.1332 },
-        sightings: [
-            { date: "16/05/2023", location: { lat: 19.4350, lng: -99.1350 } }
-        ],
-        comments: [],
+        sightings: [{ date: "16/05/2023", location: { lat: 19.4350, lng: -99.1350 } }],
+        comments: [], 
         contactInfo: "tel:5512345678"
     },
     {
@@ -72,65 +70,21 @@ const initialLostPets = [
         sightings: [],
         comments: [],
         contactInfo: "tel:5566778899"
-    },
-    {
-        id: 7,
-        name: "Maya",
-        description: "Perrita beagle tricolor, muy juguetona. Se perdió durante un viaje familiar en Coyoacán.",
-        photo: "https://images.unsplash.com/photo-1594149929911-78975a43d4f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "21/05/2023",
-        location: { lat: 19.3496, lng: -99.1613 },
-        sightings: [],
-        comments: [],
-        contactInfo: "tel:5544556677"
-    },
-    {
-        id: 8,
-        name: "Simba",
-        description: "Perro mestizo mediano, color dorado como un león. Se perdió en el parque México.",
-        photo: "https://images.unsplash.com/photo-1554692918-08fa0fdc9db3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "19/05/2023",
-        location: { lat: 19.4190, lng: -99.1670 },
-        sightings: [],
-        comments: [],
-        contactInfo: "tel:5588990011"
-    },
-    {
-        id: 11,
-        name: "Rufo",
-        description: "Perro mestizo mediano, color café con manchas blancas. Se perdió en la colonia Narvarte. Tiene cicatriz en la oreja derecha.",
-        photo: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2012&q=80",
-        date: "25/05/2023",
-        location: { lat: 19.3975, lng: -99.1579 },
-        sightings: [],
-        comments: [],
-        contactInfo: "tel:5512348765"
-    },
-    {
-        id: 13,
-        name: "Taco",
-        description: "Perro chihuahua cabeza de venado, color crema. Se perdió en Mixcoac. Usa collar azul con chapita de identificación.",
-        photo: "https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "24/05/2023",
-        location: { lat: 19.3715, lng: -99.1864 },
-        sightings: [],
-        comments: [],
-        contactInfo: "tel:5577883344"
     }
 ];
 
 const initialFoundPets = [
     {
-        id: 16,
-        name: "Rocky",
-        description: "Perro mestizo encontrado en Polanco, aproximadamente 2 años.",
-        photo: "https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-        date: "12/05/2023",
+        id: 11,
+        name: "Rex",
+        description: "Perro pastor belga encontrado en Polanco. Tiene chip pero la información está desactualizada.",
+        photo: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
+        date: "14/05/2023",
         foundLocation: { lat: 19.4339, lng: -99.1941 },
         contactInfo: "Refugio Amigos Fieles - tel:5555667788"
     },
     {
-        id: 17,
+        id: 12,
         name: "Daisy",
         description: "Perrita salchicha encontrada en la colonia Roma. Usa un collar rosa sin placa.",
         photo: "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2035&q=80",
@@ -139,7 +93,25 @@ const initialFoundPets = [
         contactInfo: "Clínica Veterinaria Patitas - tel:5544332211"
     },
     {
-        id: 20,
+        id: 13,
+        name: "Bruno",
+        description: "Perro boxer encontrado en Coyoacán. Tiene cicatriz en la pata derecha.",
+        photo: "https://images.unsplash.com/photo-1626544827763-d516dce335e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+        date: "18/05/2023",
+        foundLocation: { lat: 19.3496, lng: -99.1613 },
+        contactInfo: "tel:5577889900 (Sra. Martínez)"
+    },
+    {
+        id: 14,
+        name: "Lola",
+        description: "Perrita poodle blanca encontrada en San Ángel. Está esterilizada y tiene arete verde.",
+        photo: "https://images.unsplash.com/photo-1594149929921-788d2d6907f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        date: "20/05/2023",
+        foundLocation: { lat: 19.3449, lng: -99.1946 },
+        contactInfo: "Veterinaria San Ángel - tel:5599887766"
+    },
+    {
+        id: 15,
         name: "Zeus",
         description: "Perro gran danés encontrado en Santa Fe. Es joven y muy juguetón.",
         photo: "https://images.unsplash.com/photo-1625794084867-8ddd239946b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -148,67 +120,21 @@ const initialFoundPets = [
         contactInfo: "Refugio Milagros Caninos - tel:5555667788"
     },
     {
-        id: 22,
-        name: "Rocky",
-        description: "Perro schnauzer miniatura encontrado en la Del Valle. Tiene placa con nombre pero sin teléfono.",
-        photo: "https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "19/05/2023",
-        foundLocation: { lat: 19.3869, lng: -99.1638 },
-        contactInfo: "Albergue Patitas Felices - tel:5544332211"
+        id: 16,
+        name: "Molly",
+        description: "Perrita bulldog francés encontrada en la Condesa. Tiene un lunar cerca del ojo izquierdo.",
+        photo: "https://images.unsplash.com/photo-1626544827763-d516dce335e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+        date: "17/05/2023",
+        foundLocation: { lat: 19.4135, lng: -99.1710 },
+        contactInfo: "tel:5511223344 (Juan Pérez)"
     },
     {
-        id: 23,
-        name: "Luna",
-        description: "Perrita husky encontrada en Interlomas. Tiene ojos de diferente color (uno azul, uno café).",
-        photo: "https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "21/05/2023",
-        foundLocation: { lat: 19.4018, lng: -99.1576 },
-        contactInfo: "tel:5577889900 (Familia Rodríguez)"
-    },
-    {
-        id: 24,
-        name: "Toby",
-        description: "Perro golden retriever encontrado en el Bosque de Chapultepec. Es adulto y muy tranquilo.",
-        photo: "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-        date: "23/05/2023",
-        foundLocation: { lat: 19.4210, lng: -99.1865 },
-        contactInfo: "Guardería Canina Happy Dog - tel:5599887766"
-    },
-    {
-        id: 25,
-        name: "Coco",
-        description: "Perro chihuahua encontrado en la Nápoles. Es anciano y necesita medicamento.",
-        photo: "https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "24/05/2023",
-        foundLocation: { lat: 19.3970, lng: -99.1678 },
-        contactInfo: "Veterinaria Central - tel:5555667788"
-    },
-    {
-        id: 26,
-        name: "Manchas",
-        description: "Perro dálmata encontrado en Jardín Balbuena. Tiene sobrepeso y necesita dieta especial.",
-        photo: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80",
-        date: "29/05/2023",
-        foundLocation: { lat: 19.4893, lng: -99.1197 },
-        contactInfo: "Veterinaria Balbuena - tel:5555234567"
-    },
-    {
-        id: 27,
-        name: "Pelusa",
-        description: "Perrita pomerania blanca encontrada en Lindavista. Está esterilizada y tiene chip.",
-        photo: "https://images.unsplash.com/photo-1625794084867-8ddd239946b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-        date: "30/05/2023",
-        foundLocation: { lat: 19.4915, lng: -99.1357 },
-        contactInfo: "tel:5544332211 (Familia González)"
-    },
-    {
-        id: 29,
-        name: "Chocolate",
-        description: "Perro labrador chocolate encontrado en Xochimilco. Es joven y muy energético.",
-        photo: "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-        date: "31/05/2023",
-        foundLocation: { lat: 19.2578, lng: -99.1036 },
-        contactInfo: "Refugio Xochimilco - tel:5555456789"
+        id: 17, name: "Rocky",
+        description: "Perro mestizo encontrado en Polanco, aproximadamente 2 años.",
+        photo: "https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+        date: "12/05/2023", 
+        foundLocation: { lat: 19.4339, lng: -99.1941 },
+        contactInfo: "Refugio Amigos Fieles - tel:5555667788"
     }
 ];
 
@@ -264,7 +190,7 @@ function displayPetsSection(pets, containerId, isLost) {
         container.appendChild(petCard);
         
         if (isLost && pet.location) {
-            setTimeout(() => initPetMap(pet.id, pet.location, pet.sightings), 100);
+            setTimeout(() => initPetMap(pet.id, pet.location, pet.sightings || []), 100);
         }
     });
 }
@@ -320,17 +246,15 @@ function createPetCard(pet, isLost) {
     
     return card;
 }
-// Cambios en la función initPetMap para hacerlo interactivo
+
 function initPetMap(petId, mainLocation, sightings) {
     const mapElement = document.getElementById(`map-${petId}`);
     if (!mapElement || !mainLocation) return;
 
-    // Limpiar mapa existente si hay uno
     if (petMarkers[petId]) {
         petMarkers[petId].map.remove();
     }
 
-    // Crear nuevo mapa con interacción
     const map = L.map(mapElement, {
         center: [mainLocation.lat, mainLocation.lng],
         zoom: 15,
@@ -339,12 +263,10 @@ function initPetMap(petId, mainLocation, sightings) {
         scrollWheelZoom: true
     });
 
-    // Capa de mapa
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    // Marcador principal (rojo)
     const mainMarker = L.marker([mainLocation.lat, mainLocation.lng], {
         icon: L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
@@ -354,10 +276,8 @@ function initPetMap(petId, mainLocation, sightings) {
         })
     }).addTo(map).bindPopup("Última ubicación reportada");
 
-    // Array para almacenar marcadores de avistamientos
     const sightingMarkers = [];
 
-    // Agregar marcadores de avistamientos (azules)
     sightings?.forEach((sighting, index) => {
         const marker = L.marker([sighting.location.lat, sighting.location.lng], {
             icon: L.icon({
@@ -370,127 +290,49 @@ function initPetMap(petId, mainLocation, sightings) {
         sightingMarkers.push(marker);
     });
 
-    // Guardar referencia al mapa y marcadores
     petMarkers[petId] = {
         map: map,
         mainMarker: mainMarker,
         sightingMarkers: sightingMarkers
     };
 
-    // Ajustar el zoom para mostrar todos los marcadores
     if (sightings.length > 0) {
         const group = new L.featureGroup([mainMarker, ...sightingMarkers]);
         map.fitBounds(group.getBounds().pad(0.2));
     }
 
-    // Forzar actualización de tamaño
     setTimeout(() => map.invalidateSize(), 100);
-}
-
-// Modificar la función submitSighting para actualizar el mapa
-function submitSighting() {
-    if (!currentMarker || !currentPetId) {
-        alert('Primero marca una ubicación en el mapa');
-        return;
-    }
-
-    const position = currentMarker.getLatLng();
-    const petIndex = lostPets.findIndex(p => p.id === currentPetId);
-    
-    if (petIndex === -1) {
-        alert('Error: No se encontró el perrito');
-        return;
-    }
-
-    // Crear nuevo avistamiento
-    const newSighting = {
-        date: new Date().toLocaleDateString(),
-        location: { lat: position.lat, lng: position.lng }
-    };
-
-    // Agregar a los avistamientos
-    if (!lostPets[petIndex].sightings) {
-        lostPets[petIndex].sightings = [];
-    }
-    
-    lostPets[petIndex].sightings.push(newSighting);
-
-    // Actualizar el mapa existente
-    if (petMarkers[currentPetId]) {
-        const map = petMarkers[currentPetId].map;
-        
-        // Agregar nuevo marcador (verde para el más reciente)
-        const newMarker = L.marker([position.lat, position.lng], {
-            icon: L.icon({
-                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-                iconSize: [25, 41],
-                iconAnchor: [12, 41],
-                popupAnchor: [1, -34]
-            })
-        }).addTo(map).bindPopup(`Nuevo avistamiento<br>Fecha: ${newSighting.date}`);
-
-        petMarkers[currentPetId].sightingMarkers.push(newMarker);
-
-        // Ajustar el zoom para mostrar todos los marcadores
-        const group = new L.featureGroup([
-            petMarkers[currentPetId].mainMarker,
-            ...petMarkers[currentPetId].sightingMarkers
-        ]);
-        map.fitBounds(group.getBounds().pad(0.2));
-    }
-
-    // Guardar y actualizar
-    saveAllData();
-    
-    // Cerrar modal
-    bootstrap.Modal.getInstance(document.getElementById('sightingModal')).hide();
-    
-    // Mostrar mensaje
-    alert('¡Avistamiento reportado correctamente!');
-}
-
-// Actualizar la función displayPetsSection para mantener interactividad
-function displayPetsSection(pets, containerId, isLost) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = '';
-    
-    if (pets.length === 0) {
-        container.innerHTML = `<div class="alert alert-info">No hay perritos ${isLost ? 'perdidos' : 'encontrados'} aún</div>`;
-        return;
-    }
-    
-    pets.forEach(pet => {
-        const petCard = createPetCard(pet, isLost);
-        container.appendChild(petCard);
-        
-        if (isLost && pet.location) {
-            // Usar setTimeout para asegurar que el elemento del mapa esté en el DOM
-            setTimeout(() => {
-                initPetMap(pet.id, pet.location, pet.sightings || []);
-            }, 100);
-        }
-    });
 }
 
 function initMapModal() {
     const mapElement = document.getElementById('map');
     if (!mapElement) return;
     
-    // Limpiar mapa existente
     if (mapModal) {
         mapModal.remove();
     }
     
-    // Crear nuevo mapa
     mapModal = L.map(mapElement).setView([19.4326, -99.1332], 12);
     
-    // Capa de mapa
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(mapModal);
-    
-    // Forzar actualización de tamaño
-    setTimeout(() => mapModal.invalidateSize(), 100);
+
+    // Permitir agregar marcadores haciendo clic
+    mapModal.on('click', function(e) {
+        if (currentMarker) {
+            mapModal.removeLayer(currentMarker);
+        }
+        
+        currentMarker = L.marker(e.latlng, {
+            icon: L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            })
+        }).addTo(mapModal).bindPopup("Nuevo avistamiento").openPopup();
+    });
 }
 
 function getCurrentLocation() {
@@ -499,7 +341,6 @@ function getCurrentLocation() {
         return;
     }
     
-    // Limpiar marcador anterior
     if (currentMarker && mapModal) {
         mapModal.removeLayer(currentMarker);
     }
@@ -513,10 +354,8 @@ function getCurrentLocation() {
             
             if (!mapModal) return;
             
-            // Centrar mapa en la ubicación
             mapModal.setView([pos.lat, pos.lng], 15);
             
-            // Agregar marcador
             currentMarker = L.marker([pos.lat, pos.lng], {
                 icon: L.icon({
                     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
@@ -524,9 +363,7 @@ function getCurrentLocation() {
                     iconAnchor: [12, 41],
                     popupAnchor: [1, -34]
                 })
-            }).addTo(mapModal);
-            
-            currentMarker.bindPopup('Tu ubicación actual').openPopup();
+            }).addTo(mapModal).bindPopup("Tu ubicación actual").openPopup();
         },
         error => {
             alert(`Error al obtener ubicación: ${error.message}`);
@@ -549,32 +386,39 @@ function submitSighting() {
         return;
     }
     
-    // Crear nuevo avistamiento
     const newSighting = {
         date: new Date().toLocaleDateString(),
         location: { lat: position.lat, lng: position.lng }
     };
     
-    // Agregar a los avistamientos
     if (!lostPets[petIndex].sightings) {
         lostPets[petIndex].sightings = [];
     }
     
     lostPets[petIndex].sightings.push(newSighting);
-    
-    // Si no tenía ubicación principal, establecerla
-    if (!lostPets[petIndex].location) {
-        lostPets[petIndex].location = { lat: position.lat, lng: position.lng };
+
+    if (petMarkers[currentPetId]) {
+        const map = petMarkers[currentPetId].map;
+        const newMarker = L.marker([position.lat, position.lng], {
+            icon: L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34]
+            })
+        }).addTo(map).bindPopup(`Nuevo avistamiento<br>Fecha: ${newSighting.date}`);
+
+        petMarkers[currentPetId].sightingMarkers.push(newMarker);
+
+        const group = new L.featureGroup([
+            petMarkers[currentPetId].mainMarker,
+            ...petMarkers[currentPetId].sightingMarkers
+        ]);
+        map.fitBounds(group.getBounds().pad(0.2));
     }
-    
-    // Guardar y actualizar
+
     saveAllData();
-    displayAllPets();
-    
-    // Cerrar modal
     bootstrap.Modal.getInstance(document.getElementById('sightingModal')).hide();
-    
-    // Mostrar mensaje
     alert('¡Avistamiento reportado correctamente!');
 }
 
@@ -586,21 +430,17 @@ function markPetAsFound(petId) {
     const petIndex = lostPets.findIndex(p => p.id === petId);
     if (petIndex === -1) return;
     
-    // Mover de perdidos a encontrados
     const foundPet = { ...lostPets[petIndex] };
     foundPet.foundLocation = foundPet.location;
     foundPet.date = new Date().toLocaleDateString();
     delete foundPet.location;
     delete foundPet.sightings;
     
-    // Eliminar de perdidos y agregar a encontrados
     lostPets.splice(petIndex, 1);
     foundPets.unshift(foundPet);
     
-    // Guardar y actualizar
     saveAllData();
     displayAllPets();
-    
     alert('¡Perrito marcado como encontrado!');
 }
 
@@ -641,24 +481,18 @@ function submitComment() {
         return;
     }
     
-    // Crear nuevo comentario
     const newComment = {
         user: "Usuario",
         text: commentText,
         date: new Date().toLocaleDateString()
     };
     
-    // Agregar a los comentarios
     if (!lostPets[petIndex].comments) {
         lostPets[petIndex].comments = [];
     }
     
     lostPets[petIndex].comments.push(newComment);
-    
-    // Guardar y actualizar
     saveAllData();
-    
-    // Recargar comentarios y limpiar campo
     loadComments(currentPetId);
     document.getElementById('new-comment').value = '';
 }
@@ -669,13 +503,11 @@ function submitReport() {
     const contactInfo = document.getElementById('contact-info').value;
     const photoInput = document.getElementById('pet-photo');
     
-    // Validación
     if (!description || !contactInfo || !photoInput.files[0]) {
         alert('Por favor completa todos los campos obligatorios');
         return;
     }
     
-    // Procesar foto
     let photoUrl;
     try {
         photoUrl = URL.createObjectURL(photoInput.files[0]);
@@ -685,7 +517,6 @@ function submitReport() {
         return;
     }
     
-    // Crear nuevo reporte
     const newPet = {
         id: Date.now(),
         name: petName,
@@ -698,32 +529,21 @@ function submitReport() {
         comments: []
     };
     
-    // Agregar a perdidos
     lostPets.unshift(newPet);
-    
-    // Guardar y actualizar
     saveAllData();
     displayAllPets();
-    
-    // Limpiar formulario
     document.getElementById('report-form').reset();
-    
-    // Mostrar mensaje y desplazar
     alert(`¡Reporte de ${petName || 'perrito'} enviado correctamente!`);
     document.getElementById('perdidos').scrollIntoView({ behavior: 'smooth' });
 }
 
 function setupEventListeners() {
-    // Formulario de reporte
     document.getElementById('report-form').addEventListener('submit', function(e) {
         e.preventDefault();
         submitReport();
     });
     
-    // Botones del modal de avistamiento
     document.getElementById('get-location-btn').addEventListener('click', getCurrentLocation);
     document.getElementById('submit-sighting').addEventListener('click', submitSighting);
-    
-    // Botón de comentarios
     document.getElementById('submit-comment').addEventListener('click', submitComment);
 }

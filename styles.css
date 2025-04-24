@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -13,7 +12,6 @@ header {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Navegación */
 .navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -22,7 +20,6 @@ header {
     font-weight: 500;
 }
 
-/* Contenedores principales */
 .container {
     max-width: 1200px;
 }
@@ -41,13 +38,13 @@ header {
     }
 }
 
-/* Tarjetas de mascotas */
 .pet-card {
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .pet-card:hover {
@@ -83,15 +80,21 @@ header {
     font-size: 0.8rem;
 }
 
-/* Mapas */
-/* Añadir estos estilos para los mapas interactivos */
+/* Mapas interactivos */
 .pet-map {
     height: 250px;
     width: 100%;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ddd;
-    z-index: 1; /* Asegurar que los controles del mapa sean clickeables */
+    z-index: 1;
+}
+
+.modal-map {
+    height: 60vh;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .leaflet-control-container {
@@ -110,22 +113,8 @@ header {
     font-weight: bold;
 }
 
-/* Asegurar que el mapa no interfiera con otros elementos */
-.pet-card {
-    position: relative;
-    overflow: visible; /* Permitir que los controles del mapa se muestren */
-}
-
-/* Mejorar el z-index para los popups */
 .leaflet-popup {
     z-index: 1000;
-}
-
-.modal-map {
-    height: 400px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #ddd;
 }
 
 /* Botones */
@@ -199,5 +188,9 @@ header {
     .btn-action {
         width: 100%;
         margin: 5px 0;
+    }
+    
+    .modal-map {
+        height: 50vh;
     }
 }
